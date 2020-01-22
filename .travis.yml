@@ -45,6 +45,7 @@ before_script:
 
 
 script:
+  - bash -c 'shopt -s globstar nullglob; shellcheck **/*.{sh,ksh,bash}'
   - make test-dirty test
 
 after_success:
